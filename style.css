@@ -1,0 +1,229 @@
+:root {
+  --heading: 2.5rem;
+  --medium-font-size: 1.5rem;
+  --small-font-size: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Raleway', sans-serif; */
+}
+.navbar {
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px 5rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  top: 0;
+  position: sticky;
+}
+
+.navUl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  text-align: center;
+}
+.navUl > li {
+  list-style: none;
+}
+.navUl > li > a {
+  text-decoration: none;
+  color: black;
+}
+.navUl > li:first-child {
+  font-size: 2rem;
+}
+.navUl > li:last-child {
+  font-size: 1.5rem;
+}
+/* .............Header.....................  */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.intro > img {
+  width: 30rem;
+  /* height: 350px; */
+  border-radius: 5px;
+}
+.introMatter {
+  width: 50%;
+  /* height: 350px; */
+  /* border: 1px solid red; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 5px;
+  padding: 0px 2px;
+}
+.introMatter > p {
+  width: 100%;
+}
+h1 {
+  font-size: 2.5rem;
+}
+.needData {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+/* ------------------------------------- */
+.headings {
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: var(--small-font-size);
+  border-top: 0.5px solid grey;
+  /* border-bottom: 2px solid red; */
+  /* border-width: 2rem; */
+  text-decoration: underline;
+  text-decoration-color: red;
+  width: 92%;
+  padding-top: var(--medium-font-size);
+}
+/* -------------------- */
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 90%;
+  margin: auto;
+}
+.offers > div {
+  margin: auto;
+  height: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 20px 15px;
+  margin-bottom: 2rem;
+}
+.offers > div > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  width: 100%;
+
+}
+.offers > div > img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 45%;
+}
+/* .................Footer............................ */
+.footer {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: auto;
+  padding: 25px 60px;
+}
+.bottomLogo>a{
+text-decoration: none;
+color: black;
+font-size: var(--heading);
+}
+
+.socialmedia{
+    /* border: 1px solid red; */
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+margin-top: 1rem;
+gap: 10px;
+}
+.socialmedia>p{
+font-size: var(--small-font-size);
+/* border: 1px solid red; */
+padding: 3px;
+width: auto;
+height: auto;
+border-radius: 50%;
+background-color: rgb(109, 107, 107);  
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.socialmedia>p>a{
+color: white;
+text-decoration: none;
+padding: 4px;
+/* margin: auto; */
+
+}
+
+.terms{
+    padding: 5px 10px;
+    /* border: 1px solid red; */
+    margin-top: var(--medium-font-size);
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 20px;
+}
+.terms>p>a{
+text-decoration: none;
+color: black;
+font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .introMatter > p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .intro {
+    flex-direction: column;
+  }
+  .intro > img {
+    width: 80%;
+    height: auto;
+  }
+  .introMatter {
+    width: 80%;
+    height: auto;
+  }
+  .introMatter > h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 662px) {
+  .offers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 440px) {
+  .intro > img {
+    height: auto;
+  }
+  .navUl {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: var(--medium-font-size);
+    font-weight: 900;
+  }
+  .offers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer{
+    text-align: center;
+  }
+  .socialmedia{
+    margin: auto;
+  }
+  .terms{
+    display: block;
+  }
+}
+/* ..............Services.................... */
